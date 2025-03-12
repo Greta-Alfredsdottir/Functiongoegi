@@ -38,10 +38,30 @@ function showResult(myEuroResult, myDollarResult, myDanishAmount) {
 
 }
 
-/* skriv din kode herunder.
+// skriv din kode herunder
 
+function makeExchange(myEuroRate, myDollarRate, myDanishAmount) {
+    //alert('Jeg vil gerne kalde en funktion der kan regne valutaen ud...');
+    //console.log('myEuroRate: ' + myEuroRate);
+    //console.log('myDollarRate: ' + myDollarRate);
+    //console.log('myDanishAmount: ' + myDanishAmount);
 
+    let myEuroResult = myDanishAmount / myEuroRate;
+    let myDollarResult = myDanishAmount / myDollarRate;
 
+    //console.log('myEuroResult: ' + myEuroResult);
+    //console.log('myDollarResult: ' + myDollarResult);
 
+    showResult(myEuroResult, myDollarResult, myDanishAmount);
+}
+function calculateExchange() {
+    const myEuroRate = document.getElementById('euroRate').value;
+    const myDollarRate = document.getElementById('dollarRate').value;
 
+    const myDanishAmount = document.getElementById('danishAmount').value;
 
+    let myEuroResult = myDanishAmount / myEuroRate;
+    let myDollarResult = myDanishAmount * myDollarRate;
+
+    showResult(myEuroResult, myDollarResult, myDanishAmount);
+}   
